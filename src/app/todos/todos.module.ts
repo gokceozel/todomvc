@@ -5,6 +5,8 @@ import { HeaderComponent } from 'src/app/todos/components/header/header.componen
 import { TodoService } from "src/app/todos/services/todo.service";
 import { MainComponent } from 'src/app/todos/components/main/main.component';
 import { CommonModule } from "@angular/common";
+import { TodoComponent } from 'src/app/todos/components/todo/todo.component';
+import { FooterComponent } from 'src/app/todos/components/footer/footer.component';
 
 const routes: Routes=[
   {
@@ -17,7 +19,9 @@ const routes: Routes=[
   declarations:[
       TodosComponent,
       HeaderComponent,
-      MainComponent
+      MainComponent,
+      TodoComponent,
+      FooterComponent
   ],
   imports:[CommonModule, RouterModule.forChild(routes)],
   providers:[TodoService]
