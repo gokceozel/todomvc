@@ -37,7 +37,7 @@ export class TodoComponent implements OnInit
 
   toggleTodo():void
   {
-
+    this.todoService.toggleTodo(this.todoProps.id);
   }
 
   changeTodo():void

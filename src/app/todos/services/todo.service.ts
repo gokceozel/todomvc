@@ -56,5 +56,18 @@ export class TodoService {
     
     this.todos$.next(updatedTodo);
   }
+
+  toggleTodo(id:string):void
+  {
+    const updated=this.todos$.getValue().map((todo)=>{
+      if(todo.id===id){
+        return {
+          ...todo,
+          isCompleted: !todo.isCompleted
+        }
+      }
+      return todo;
+    })
+  }
 }
 
